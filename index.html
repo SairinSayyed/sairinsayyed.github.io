@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham Dannaway Inspired Header</title>
+    <style>
+     @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding:0;
+}
+
+section{
+  position:relative;
+  height:100vh;
+  display:flex;
+}
+
+section .screen{
+  position:relative;
+  flex-grow:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  transition:.1s;
+}
+
+section .screen:nth-child(1){
+  background:#fff;
+}
+
+section .screen:nth-child(2){
+  background:#ff0;
+}
+
+section .screen .card{
+  max-width:300px;
+  text-align:center;
+  transition:.5s;
+}
+
+section .screen .card .imgbox{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:0 auto;
+}
+
+section .screen .card .imgbox img{
+  max-width:100%;
+}
+
+section .screen .card a{
+  padding:10px 20px;
+  background:#262626;
+  color:#fff;
+  text-decoration:none;
+}
+
+.content{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:100px;
+  background:#fff;
+  margin:0;
+  opacity:0;
+  visibility:hidden;
+}
+
+section .screen:hover{
+  flex-grow:2;
+}
+
+section .screen .card a:hover ~ .content,.content:hover{
+  opacity:1;
+  visibility:visible;
+}
+
+section .screen:nth-child(2) .content{
+  background:#ff0;
+}
+    </style>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <section class="split">
+    <div class="screen">
+      <div class="card">
+        <div class="imgbox">
+          <img src="https://via.placeholder.com/350x150" alt="">
+        </div>
+        <h2>Someon famouse</h2>
+        <a href="#">Read More</a>
+        <div class="content">
+          <div class="imgbox">
+          <img src="https://via.placeholder.com/350x150" alt="">
+        </div>
+          <h2>Someone famouse</h2>
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      <div class="card">
+        <div class="imgbox">
+          <img src="https://via.placeholder.com/350x150" alt="">
+        </div>
+        <h2>Someon famouse</h2>
+        <a href="#">Read More</a>
+        <div class="content">
+          <div class="imgbox">
+          <img src="https://via.placeholder.com/350x150" alt="">
+        </div>
+          <h2>Someone famouse</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+</body>
+</html>
