@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayyed Sairin | AI Automation Engineer & Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #f1f5f9;
+      --border-dark: #cbd5e1;
+      --accent: #0f172a;
+      --card-bg: #fafafa;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #1e293b;
+      --border-dark: #334155;
+      --accent: #38bdf8;
+      --card-bg: #1e293b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4%;
+    }
+
+    /* Minimal Top Navigation */
+    nav {
+      padding: 32px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .theme-toggle-btn {
+      background: none;
+      border: 1px solid var(--border-dark);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle-btn:hover {
+      background: var(--card-bg);
+    }
+
+    /* Scroll Reveal Baseline Class */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Asymmetric Split Grid Layout */
+    .section-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 40px;
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Sleek Typography Rules */
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: -0.2px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+      max-width: 760px;
+    }
+
+    /* Custom Badges & Skill Pills */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border: 1px solid var(--border-dark);
+      border-radius: 100px;
+      font-size: 12px;
+      color: var(--text-main);
+      background: var(--card-bg);
+      font-weight: 500;
+    }
+
+    /* Premium Experience Timeline Blocks */
+    .exp-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-item {
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      border-bottom: 1px dashed var(--border-dark);
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .company-logo-wrapper {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .company-icon {
+      width: 28px;
+      height: 28px;
+      color: var(--text-main);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    .exp-title-block {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .exp-role {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-main);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .premium-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border-dark);
+      background: var(--bg);
+      padding: 6px 10px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 4px;
+      background: var(--text-main);
+      border-radius: 2px;
+    }
+
+    .badge-sep {
+      color: var(--border-dark);
+      margin: 0 2px;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      font-size: 18px;
+      top: -2px;
+    }
+
+    /* Modern Card Layouts */
+    .automation-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .pipeline-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: all 0.2s ease;
+    }
+
+    .pipeline-card:hover {
+      border-color: var(--border-dark);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-dark);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-info h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .project-info p {
+      font-size: 13.5px;
+      margin-bottom: 20px;
+      color: var(--text-muted);
+    }
+
+    .project-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--text-main);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-live:hover {
+      opacity: 0.9;
+    }
+
+    .contact-details p {
+      margin-bottom: 12px;
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 15px;
+    }
+    
+    .contact-details a {
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--border-dark);
+    }
+    
+    .contact-details a:hover {
+      border-bottom-style: solid;
+    }
+
+    footer {
+      padding: 60px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* CRITICAL: Strict 1-Page Layout Scaling Engine for PDF Generation */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 10mm 8mm 10mm;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        transition: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #0c111d !important;
+        font-size: 9.5pt !important;
+        line-height: 1.4 !important;
+      }
+      nav, footer, #projects, .theme-toggle-btn, .btn-live {
+        display: none !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .section-grid {
+        display: grid !important;
+        grid-template-columns: 140px 1fr !important;
+        gap: 20px !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid #eaecf0 !important;
+        page-break-inside: avoid !important;
+      }
+      .section-label {
+        font-size: 8pt !important;
+        color: #475569 !important;
+        margin-top: 2px !important;
+        letter-spacing: 1px !important;
+      }
+      h1 { font-size: 22pt !important; margin-bottom: 4px !important; letter-spacing: -1px !important; }
+      h2 { font-size: 12pt !important; margin-bottom: 4px !important; color: #1e293b !important; }
+      p { color: #475569 !important; font-size: 9.5pt !important; margin-bottom: 8px !important; }
+      .tags-container { gap: 4px !important; margin-bottom: 8px !important; }
+      .tag {
+        border: 1px solid #cbd5e1 !important;
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        padding: 2px 8px !important;
+        font-size: 8pt !important;
+      }
+      .exp-item {
+        padding-bottom: 12px !important;
+        margin-bottom: 12px !important;
+        border-bottom: 1px dashed #e2e8f0 !important;
+        page-break-inside: avoid !important;
+      }
+      .exp-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
+      .company-logo-wrapper { display: none !important; }
+      .exp-header { margin-bottom: 6px !important; gap: 8px !important; }
+      .exp-role { font-size: 11pt !important; color: #0f172a !important; }
+      .premium-badge {
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9pt !important;
+        color: #475569 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+      .badge-dot, .badge-sep { display: none !important; }
+      .bullet-list li {
+        color: #334155 !important;
+        font-size: 9.5pt !important;
+        margin-bottom: 4px !important;
+        padding-left: 14px !important;
+      }
+      .bullet-list li::before { font-size: 12px !important; top: -1px !important; }
+      .automation-container { gap: 12px !important; }
+      .pipeline-card { padding: 12px !important; border-radius: 6px !important; background: #fafafa !important; border: 1px solid #f1f5f9 !important; }
+      .pipeline-card h3 { font-size: 11pt !important; margin-bottom: 4px !important; }
+      .pipeline-card p { margin-bottom: 6px !important; font-size: 9pt !important; }
+      .contact-details p { margin-bottom: 6px !important; font-size: 9.5pt !important; }
+    }
+
+    /* Clean Responsive Adaptation */
+    @media (max-width: 900px) {
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 60px 0;
+      }
+      .automation-container, .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      h1 { font-size: 34px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <nav>
+      <div class="logo">Sairin Sayyed</div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#skills">Skills</a>
+          <a href="#automation">Automation</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Web Work</a>
+          <a href="#contact">Contact</a>
+          <a href="javascript:window.print()" style="color: var(--text-main); font-weight: 700;">↓ Download CV</a>
+        </div>
+        <button class="theme-toggle-btn" id="themeToggle">Dark</button>
+      </div>
+    </nav>
+
+    <section class="section-grid reveal">
+      <div class="section-label">Profile</div>
+      <div>
+        <h1>Sayyed Sairin</h1>
+        <h2>AI Automation Systems & Web Developer</h2>
+        <p style="margin-top: 16px; font-size: 16px;">
+          Building intelligent automation pipelines, secure cloud infrastructure, and highly calibrated web experiences. Specializing in Python orchestration, natural language conversational bots, and modern full-stack systems.
+        </p>
+        <p style="font-size: 14px;">
+          <strong>Career Objective:</strong> To collaborate within a progressive engineering landscape that provides the scale to design impactful technical software ecosystems while driving accelerated organizational growth.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section-grid reveal">
+      <div class="section-label">Expertise</div>
+      <div>
+        <div class="tags-container">
+          <span class="tag">Python (AI & Cloud Systems)</span>
+          <span class="tag">Vertex AI & Dialogflow</span>
+          <span class="tag">Google Cloud Platform</span>
+          <span class="tag">HTML5, CSS3, JavaScript</span>
+          <span class="tag">PHP Backend Architecture</span>
+          <span class="tag">WordPress Ecosystem</span>
+          <span class="tag">Cyber Security Tools</span>
+          <span class="tag">Shopify Engineering</span>
+          <span class="tag">Moodle Deployment</span>
+          <span class="tag">Kali Linux Stack</span>
+          <span class="tag">REST API integrations</span>
+        </div>
+
+        <br>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 12px;">Cyber Security Capabilities & Reconnaissance</h3>
+        <ul class="bullet-list">
+          <li>Conducted open-source intelligence web reconnaissance matrices using <strong>recon-ng</strong> and infrastructure profiling frameworks.</li>
+          <li>Executed deep network asset discovery and service vulnerability validation using the <strong>Nmap</strong> tool suite.</li>
+          <li>Audited data layers using <strong>SQLMAP</strong> to identify and isolate application SQL Injection vulnerabilities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="automation" class="section-grid reveal">
+      <div class="section-label">Automation</div>
+      <div>
+        <div class="automation-container">
+          
+          <div class="pipeline-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 18px; margin-bottom: 10px;">AI Support Bot Engine</h3>
+              <p style="font-size: 14px; margin-bottom: 20px;">Developed an automated admin assistant bot using Vertex AI and Dialogflow. Programmed conversational logic branches to securely handle normal user account creation and automated administrator password changes without manual intervention.</p>
+            </div>
+            <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Vertex AI</span>
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Dialogflow</span>
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Python</span>
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">GCP</span>
+            </div>
+          </div>
+
+          <div class="pipeline-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 18px; margin-bottom: 10px;">Domain Workspace Pipelines</h3>
+              <p style="font-size: 14px; margin-bottom: 20px;">Engineered optimized infrastructure control scripts using Python to manage business enterprise life cycles. Handles programmatically triggered workspace domain creation sequences alongside safe, remote client suspension operations.</p>
+            </div>
+            <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Python</span>
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">REST APIs</span>
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Admin SDK</span>
+              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Cloud Automations</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-grid reveal">
+      <div class="section-label">Experience</div>
+      <div>
+        <div class="exp-wrapper">
+          
+          <div class="exp-item">
+            <div class="company-logo-wrapper">
+              <svg class="company-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="exp-header">
+              <div class="exp-title-block">
+                <span class="exp-role">Jr. Executive Web Developer, Think Technology Services</span>
+              </div>
+              <div class="premium-badge">
+                <div class="badge-dot"></div>
+                <span>Jan 2025 – Present</span>
+                <span class="badge-sep">•</span>
+                <span style="color: var(--text-muted);">Mumbai, IN</span>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              <li>Designed and developed responsive websites using HTML, CSS, JavaScript, PHP, as well as CMS platforms like WordPress and Shopify.</li>
+              <li>Gained hands-on experience with cPanel, including website deployment and site migrations for seamless transitions.</li>
+              <li>Customized and maintained WordPress and Shopify themes, enhancing site performance, UX, and functionality.</li>
+              <li>Managed multiple projects simultaneously, consistently meeting deadlines and client expectations.</li>
+              <li>Collaborated directly with clients to gather requirements and deliver tailored web solutions aligned with their business goals.</li>
+              <li>Architected structural conversational flow layers using Dialogflow and Vertex AI within the Google Cloud framework.</li>
+              <li>Engineered custom Python scripts for programmatic user profiles, secure credential management, and Reseller system APIs.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="company-logo-wrapper">
+              <svg class="company-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5v-15A2.5 2.5 0 0 1 6.5 2V4M20 2v20"/></svg>
+            </div>
+            <div class="exp-header">
+              <div class="exp-title-block">
+                <span class="exp-role">Web Developer, Limra Online School</span>
+              </div>
+              <div class="premium-badge">
+                <div class="badge-dot" style="background-color: #cbd5e1;"></div>
+                <span>Feb 2024 – Dec 2024</span>
+                <span class="badge-sep">•</span>
+                <span style="color: var(--text-muted);">Remote</span>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              <li>Developed Limra online school website, enhancing user experience with interactive design elements.</li>
+              <li>Developed an engaging LMS on WordPress with interactive design elements, implementing custom themes and plugins to precisely meet the online school’s needs.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="company-logo-wrapper">
+              <svg class="company-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 8v8M8 16.5l3.5-2.5M16 16.5L12.5 14"/></svg>
+            </div>
+            <div class="exp-header">
+              <div class="exp-title-block">
+                <span class="exp-role">Web Developer, AFHI UNIVERSAL</span>
+              </div>
+              <div class="premium-badge">
+                <div class="badge-dot" style="background-color: #cbd5e1;"></div>
+                <span>Feb 2023 – Jan 2024</span>
+                <span class="badge-sep">•</span>
+                <span style="color: var(--text-muted);">Remote</span>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              <li>Developed and enhanced Moodle websites with backend/frontend improvements, plugin setup, and static pages using HTML, CSS, and JavaScript.</li>
+              <li>Improved site visuals and user experience by designing layouts and themes in Canva.</li>
+              <li>Edited and integrated educational videos into Moodle, including YouTube optimization and uploads.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-grid reveal">
+      <div class="section-label">Education</div>
+      <div>
+        <div class="exp-wrapper">
+          
+          <div class="exp-item" style="padding-bottom: 24px; margin-bottom: 24px;">
+            <div class="exp-header" style="margin-bottom: 8px;">
+              <span class="exp-role" style="font-size: 16px;">Master of Science in Computer Science</span>
+              <span class="date-badge" style="font-size: 12px; color: var(--text-muted);">2021 – 2023</span>
+            </div>
+            <p style="font-size: 14px; margin: 0; color: var(--text-main); font-weight: 500;">Mumbai University <span style="color: var(--text-muted); font-weight: 400; margin-left: 6px;">— Standing: 7.23 / 10 CGPA</span></p>
+          </div>
+
+          <div class="exp-item" style="padding-bottom: 0; margin-bottom: 0;">
+            <div class="exp-header" style="margin-bottom: 8px;">
+              <span class="exp-role" style="font-size: 16px;">Bachelor of Science in Physics</span>
+              <span class="date-badge" style="font-size: 12px; color: var(--text-muted);">2018 – 2021</span>
+            </div>
+            <p style="font-size: 14px; margin: 0; color: var(--text-main); font-weight: 500;">Royal College <span style="color: var(--text-muted); font-weight: 400; margin-left: 6px;">— Standing: 8.40 / 10 CGPA</span></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-grid reveal">
+      <div class="section-label">Web Work</div>
+      <div>
+        <div class="projects-grid">
+          
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Anirit Ventures">
+            <div class="project-info">
+              <h3>Anirit Ventures</h3>
+              <p>Corporate financial relations ecosystem built for robust investor data reporting and performance layouts.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Responsive UI</span>
+                </div>
+                <a href="https://www.aniritventures.com/investor-relations.html" target="_blank" class="btn-live">Live Site ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Trading">
+            <div class="project-info">
+              <h3>Kirtanlal Trading</h3>
+              <p>A sleek, minimal enterprise layout structured to process b2b trading presentation matrices cleanly.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">CSS</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">JS</span>
+                </div>
+                <a href="https://kirtanlal.ae/trading/" target="_blank" class="btn-live">Live Site ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Blinds">
+            <div class="project-info">
+              <h3>Monsoon Blinds Framework</h3>
+              <p>Product showcase user interface utilizing modern grid structures and structured commercial sections.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Frontend</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">UX Arch</span>
+                </div>
+                <a href="https://www.nbtcurtainsystems.com/dm/monsoon-blinds" target="_blank" class="btn-live">Live Site ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Engineering">
+            <div class="project-info">
+              <h3>Kirtanlal Engineering</h3>
+              <p>Industrial structural digital framework displaying production layouts and corporate assets.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML5</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">CSS</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Core UI</span>
+                </div>
+                <a href="https://kirtanlal.ae/engg/test/" target="_blank" class="btn-live">Live Site ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Zoho">
+            <div class="project-info">
+              <h3>Zoho Cloud Automation Page</h3>
+              <p>Optimized service funnel landing page targeting business software integrations and conversions.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Lead Capture</span>
+                </div>
+                <a href="https://ithink.co/dm/zoho/" target="_blank" class="btn-live">Live Site ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Nasiha Trust">
+            <div class="project-info">
+              <h3>Nasiha Trust</h3>
+              <p>Clean non-profit digital ecosystem engineered for public outreach, community trust updates, and secure user actions.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">WordPress</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Design</span>
+                </div>
+                <a href="https://nasihatrust.org/" target="_blank" class="btn-live">Live Site ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop" class="project-img" alt="WAF">
+            <div class="project-info">
+              <h3>Web Application Firewall (WAF)</h3>
+              <p>Machine learning classification model built to identify and drop malicious network exploit request loads.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Python</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">ML</span>
+                </div>
+                <a href="https://github.com/SairinSayyed/web-application-firewall-using-ML" target="_blank" class="btn-live">Source ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Madiha Core">
+            <div class="project-info">
+              <h3>Developer Source Repositories</h3>
+              <p>Clean component repositories and frontend setup templates built and maintained on GitHub.</p>
+              <div class="project-footer">
+                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">GitHub Source</span>
+                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Open Code</span>
+                </div>
+                <a href="https://github.com/SairinSayyed/MadihaWebsite" target="_blank" class="btn-live">Source ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-grid reveal">
+      <div class="section-label">Connect</div>
+      <div class="contact-details">
+        <p><strong>Direct Connection:</strong> <a href="tel:+918692937008">+91 8692937008</a></p>
+        <p><strong>Secure Inbox:</strong> <a href="mailto:sayyedsairin@gmail.com">sayyedsairin@gmail.com</a></p>
+        <p><strong>Professional Network:</strong> <a href="https://linkedin.com/in/sairin-sayyed" target="_blank">linkedin.com/in/sairin-sayyed</a></p>
+        
+        <br>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 15px; color: var(--text-muted); margin-bottom: 6px;">Spoken Languages</h3>
+        <p style="color: var(--text-main); font-size: 14px; font-weight: 500;">English (Fluent) • Hindi (Fluent) • Marathi</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Sayyed Sairin </p>
+    </footer>
+  </div>
+
+  <script>
+    // Theme Toggle Handler
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggleBtn.textContent = 'Light';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        themeToggleBtn.textContent = 'Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggleBtn.textContent = 'Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // Scroll Reveal Engine
+    const revealSections = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.05 });
+
+    revealSections.forEach(section => revealObserver.observe(section));
+  </script>
+</body>
+</html>
