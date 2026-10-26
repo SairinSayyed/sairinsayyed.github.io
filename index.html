@@ -3,892 +3,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sayyed Sairin | AI Automation Engineer & Developer</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Sayyed Sairin is a web developer working across website development, AI support automation, Python, Google Cloud, and business application integrations. View selected work and download the resume." />
+  <meta name="theme-color" content="#f7f7f2" />
+  <title>Sayyed Sairin | Web Developer & AI Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #f1f5f9;
-      --border-dark: #cbd5e1;
-      --accent: #0f172a;
-      --card-bg: #fafafa;
-    }
-
-    [data-theme="dark"] {
-      --bg: #0f172a;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #1e293b;
-      --border-dark: #334155;
-      --accent: #38bdf8;
-      --card-bg: #1e293b;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 4%;
-    }
-
-    /* Minimal Top Navigation */
-    nav {
-      padding: 32px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      text-transform: uppercase;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-    }
-
-    .theme-toggle-btn {
-      background: none;
-      border: 1px solid var(--border-dark);
-      color: var(--text-main);
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.2s ease;
-    }
-    .theme-toggle-btn:hover {
-      background: var(--card-bg);
-    }
-
-    /* Scroll Reveal Baseline Class */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Asymmetric Split Grid Layout */
-    .section-grid {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 40px;
-      padding: 80px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-label {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 6px;
-    }
-
-    /* Sleek Typography Rules */
-    h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 42px;
-      font-weight: 500;
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      margin-bottom: 24px;
-    }
-
-    h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 22px;
-      font-weight: 500;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
-    
-    h3 {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      letter-spacing: -0.2px;
-    }
-
-    p {
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-bottom: 20px;
-      max-width: 760px;
-    }
-
-    /* Custom Badges & Skill Pills */
-    .tags-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    .tag {
-      padding: 6px 14px;
-      border: 1px solid var(--border-dark);
-      border-radius: 100px;
-      font-size: 12px;
-      color: var(--text-main);
-      background: var(--card-bg);
-      font-weight: 500;
-    }
-
-    /* Premium Experience Timeline Blocks */
-    .exp-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exp-item {
-      padding-bottom: 48px;
-      margin-bottom: 48px;
-      border-bottom: 1px dashed var(--border-dark);
-    }
-
-    .exp-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .company-logo-wrapper {
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-    }
-
-    .company-icon {
-      width: 28px;
-      height: 28px;
-      color: var(--text-main);
-    }
-
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      gap: 16px;
-    }
-
-    .exp-title-block {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .exp-role {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-main);
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .premium-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      border: 1px solid var(--border-dark);
-      background: var(--bg);
-      padding: 6px 10px;
-      border-radius: 100px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-main);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 4px;
-      background: var(--text-main);
-      border-radius: 2px;
-    }
-
-    .badge-sep {
-      color: var(--border-dark);
-      margin: 0 2px;
-    }
-
-    .bullet-list {
-      list-style-type: none;
-      color: var(--text-muted);
-      font-size: 15px;
-    }
-
-    .bullet-list li {
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 20px;
-      line-height: 1.6;
-    }
-
-    .bullet-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--text-muted);
-      font-size: 18px;
-      top: -2px;
-    }
-
-    /* Modern Card Layouts */
-    .automation-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .pipeline-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-      transition: all 0.2s ease;
-    }
-
-    .pipeline-card:hover {
-      border-color: var(--border-dark);
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--border-dark);
-    }
-
-    .project-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .project-info {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .project-info h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    .project-info p {
-      font-size: 13.5px;
-      margin-bottom: 20px;
-      color: var(--text-muted);
-    }
-
-    .project-footer {
-      margin-top: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .btn-live {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: var(--text-main);
-      color: var(--bg);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 500;
-      border-radius: 6px;
-      transition: opacity 0.2s ease;
-    }
-
-    .btn-live:hover {
-      opacity: 0.9;
-    }
-
-    .contact-details p {
-      margin-bottom: 12px;
-      color: var(--text-main);
-      font-weight: 500;
-      font-size: 15px;
-    }
-    
-    .contact-details a {
-      color: var(--text-main);
-      text-decoration: none;
-      border-bottom: 1px dashed var(--border-dark);
-    }
-    
-    .contact-details a:hover {
-      border-bottom-style: solid;
-    }
-
-    footer {
-      padding: 60px 0;
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-    }
-
-    /* CRITICAL: Strict 1-Page Layout Scaling Engine for PDF Generation */
-    @media print {
-      @page {
-        size: A4 portrait;
-        margin: 8mm 10mm 8mm 10mm;
-      }
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        transition: none !important;
-      }
-      body {
-        background: #ffffff !important;
-        color: #0c111d !important;
-        font-size: 9.5pt !important;
-        line-height: 1.4 !important;
-      }
-      nav, footer, #projects, .theme-toggle-btn, .btn-live {
-        display: none !important;
-      }
-      .container {
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      .section-grid {
-        display: grid !important;
-        grid-template-columns: 140px 1fr !important;
-        gap: 20px !important;
-        padding: 12px 0 !important;
-        border-bottom: 1px solid #eaecf0 !important;
-        page-break-inside: avoid !important;
-      }
-      .section-label {
-        font-size: 8pt !important;
-        color: #475569 !important;
-        margin-top: 2px !important;
-        letter-spacing: 1px !important;
-      }
-      h1 { font-size: 22pt !important; margin-bottom: 4px !important; letter-spacing: -1px !important; }
-      h2 { font-size: 12pt !important; margin-bottom: 4px !important; color: #1e293b !important; }
-      p { color: #475569 !important; font-size: 9.5pt !important; margin-bottom: 8px !important; }
-      .tags-container { gap: 4px !important; margin-bottom: 8px !important; }
-      .tag {
-        border: 1px solid #cbd5e1 !important;
-        background: #f8fafc !important;
-        color: #0f172a !important;
-        padding: 2px 8px !important;
-        font-size: 8pt !important;
-      }
-      .exp-item {
-        padding-bottom: 12px !important;
-        margin-bottom: 12px !important;
-        border-bottom: 1px dashed #e2e8f0 !important;
-        page-break-inside: avoid !important;
-      }
-      .exp-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important; }
-      .company-logo-wrapper { display: none !important; }
-      .exp-header { margin-bottom: 6px !important; gap: 8px !important; }
-      .exp-role { font-size: 11pt !important; color: #0f172a !important; }
-      .premium-badge {
-        border: none !important;
-        padding: 0 !important;
-        font-size: 9pt !important;
-        color: #475569 !important;
-        background: transparent !important;
-        box-shadow: none !important;
-      }
-      .badge-dot, .badge-sep { display: none !important; }
-      .bullet-list li {
-        color: #334155 !important;
-        font-size: 9.5pt !important;
-        margin-bottom: 4px !important;
-        padding-left: 14px !important;
-      }
-      .bullet-list li::before { font-size: 12px !important; top: -1px !important; }
-      .automation-container { gap: 12px !important; }
-      .pipeline-card { padding: 12px !important; border-radius: 6px !important; background: #fafafa !important; border: 1px solid #f1f5f9 !important; }
-      .pipeline-card h3 { font-size: 11pt !important; margin-bottom: 4px !important; }
-      .pipeline-card p { margin-bottom: 6px !important; font-size: 9pt !important; }
-      .contact-details p { margin-bottom: 6px !important; font-size: 9.5pt !important; }
-    }
-
-    /* Clean Responsive Adaptation */
-    @media (max-width: 900px) {
-      .section-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 60px 0;
-      }
-      .automation-container, .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      .exp-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-      h1 { font-size: 34px; }
-      .nav-links { display: none; }
-    }
+    :root{--bg:#f7f7f2;--paper:#fff;--ink:#18211d;--muted:#59645d;--line:#dfe4dc;--green:#b9f36a;--green-dark:#35551e;--orange:#ff805b;--lav:#e9e4ff;--shadow:0 16px 45px rgba(24,33,29,.07);--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit}img{display:block;max-width:100%}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.mono,.eyebrow,.nav-label,.tag,.meta{font-family:'DM Mono',monospace} .mono,.eyebrow{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}.site-header{position:sticky;top:0;z-index:10;background:rgba(247,247,242,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,228,220,.85)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.06em;font-size:1.12rem}.brand span{display:inline-block;width:9px;height:9px;border-radius:50%;background:#80bd37;margin-left:5px}.nav-links{display:flex;align-items:center;gap:27px}.nav-links a{font-size:.88rem;text-decoration:none;color:var(--muted)}.nav-links a:hover,.text-link:hover{color:#527e22}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:700;border:1px solid var(--ink);transition:transform .2s,background .2s}.nav-cta,.button.dark{background:var(--ink);color:#fff}.button.light{background:var(--paper);color:var(--ink);border-color:var(--line)}.button:hover,.nav-cta:hover{transform:translateY(-2px)}.hero{padding:78px 0 68px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--muted);margin:0 0 20px}.eyebrow:before{content:'';width:26px;height:2px;background:#83b943}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(3rem,6.5vw,5.7rem);line-height:.99;letter-spacing:-.075em;margin:0 0 23px;max-width:750px}.hero h1 .highlight{position:relative;z-index:0;white-space:nowrap}.hero h1 .highlight:after{content:'';position:absolute;z-index:-1;left:-2px;right:-4px;bottom:5px;height:25%;background:var(--green);transform:rotate(-1.4deg);border-radius:5px}.hero-copy{font-size:1.1rem;line-height:1.8;color:var(--muted);max-width:650px;margin:0 0 26px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-note{font-size:.82rem;color:var(--muted);margin:22px 0 0}.hero-art{position:relative;min-height:440px;border-radius:30px;background:#dfe8d6;overflow:hidden;padding:24px;isolation:isolate}.hero-art:before{content:'';position:absolute;width:330px;height:330px;border-radius:50%;background:var(--green);right:-85px;top:-65px;z-index:-1}.hero-art:after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:var(--orange);left:-70px;bottom:-60px;z-index:-1}.art-top{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.06em}.availability{display:flex;align-items:center;gap:8px}.availability:before{content:'';width:8px;height:8px;border-radius:50%;background:#4b8a22}.code-window{position:absolute;left:9%;right:9%;top:24%;background:#18211d;color:#f5f8f0;border-radius:18px;padding:22px 22px 25px;box-shadow:0 24px 45px #1c2c1e25;transform:rotate(-3deg)}.window-head{display:flex;gap:6px;margin-bottom:24px}.window-head i{width:8px;height:8px;border-radius:50%;background:#748077}.code-label{font-family:'DM Mono',monospace;font-size:.68rem;color:#aab9aa;margin-bottom:13px}.code-line{font-family:'DM Mono',monospace;font-size:clamp(.72rem,1.4vw,.9rem);line-height:2;white-space:nowrap}.code-line .lime{color:var(--green)}.code-line .orange{color:#ff9b7c}.floating-chip{position:absolute;padding:11px 14px;border-radius:13px;background:#fff;box-shadow:var(--shadow);font-size:.8rem;font-weight:700}.chip-one{right:8%;bottom:20%;transform:rotate(4deg)}.chip-two{left:10%;bottom:8%;background:var(--lav);transform:rotate(-5deg)}.section{padding:76px 0;border-top:1px solid var(--line)}.section-heading{display:grid;grid-template-columns:.65fr 1.35fr;gap:40px;margin-bottom:38px}.section-heading .eyebrow{margin-top:8px}.section-heading h2{font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.065em;line-height:1.08;margin:0;max-width:730px}.section-heading p{color:var(--muted);max-width:620px;margin:14px 0 0}.skill-layout{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.skill-group{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:23px}.skill-group h3{font-family:Manrope,sans-serif;font-size:1rem;margin:0 0 15px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:.72rem;color:#35443a;background:#f1f4ed;border:1px solid #e2e8dc;padding:7px 10px;border-radius:999px}.featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.feature-card{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);background:var(--paper);min-height:300px;display:flex;flex-direction:column}.feature-visual{height:155px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#e8eddf}.feature-visual.bot{background:#d9e9d0}.feature-visual.cloud{background:#e4e1ff}.feature-visual.zoho{background:#ffe5d9}.feature-visual.portal{background:#e7e9e5}.visual-window{width:72%;background:#fff;border:1px solid #d8ded6;border-radius:12px;box-shadow:0 10px 25px #18211d12;padding:12px;transform:rotate(-2deg)}.visual-window .bar{height:6px;width:35%;border-radius:9px;background:#d8dfd5;margin-bottom:10px}.visual-window .line{height:7px;border-radius:9px;background:#edf0eb;margin:7px 0}.visual-window .line.short{width:55%}.visual-window .mini-btn{display:inline-block;background:#b9f36a;border-radius:5px;width:55px;height:14px;margin-top:5px}.bubble{position:absolute;background:#fff;border:1px solid #dce3d7;border-radius:12px;padding:10px 12px;font-size:.72rem;font-weight:700;box-shadow:0 7px 20px #18211d10}.feature-visual.bot .bubble{right:10%;bottom:17%;transform:rotate(3deg)}.feature-visual.cloud .bubble{left:9%;bottom:15%;transform:rotate(-4deg)}.feature-visual.zoho .bubble{right:9%;top:16%;transform:rotate(3deg)}.feature-visual.portal .bubble{left:10%;top:18%;transform:rotate(-3deg)}.feature-body{padding:22px;display:flex;flex-direction:column;flex:1}.feature-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.meta{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.status{font-size:.68rem;font-weight:700;border-radius:999px;padding:5px 9px;background:#edf6e3;color:#446a27;white-space:nowrap}.status.progress{background:#fff0e8;color:#8b482f}.feature-body h3{font-family:Manrope,sans-serif;font-size:1.25rem;line-height:1.25;letter-spacing:-.035em;margin:0 0 9px}.feature-body p{font-size:.91rem;color:var(--muted);margin:0 0 17px}.feature-body .tags{margin-top:auto;margin-bottom:17px}.feature-link{font-size:.84rem;font-weight:700;text-decoration:none;align-self:flex-start;border-bottom:1px solid #9cac94;padding-bottom:2px}.feature-link:hover{border-color:#4c7625;color:#4c7625}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.project{overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column}.project-img{height:145px;width:100%;object-fit:cover;background:#e5e8e0}.project-content{padding:18px;display:flex;flex-direction:column;flex:1}.project h3{font-family:Manrope,sans-serif;font-size:1rem;line-height:1.35;margin:0 0 8px}.project p{font-size:.83rem;color:var(--muted);margin:0 0 16px}.project .tags{margin-top:auto;margin-bottom:15px}.text-link{font-size:.82rem;font-weight:700;text-decoration:none}.experience{display:grid;grid-template-columns:.65fr 1.35fr;gap:40px}.experience-list{border-top:1px solid var(--line)}.job{padding:25px 0;border-bottom:1px solid var(--line)}.job-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:10px}.job h3{font-family:Manrope,sans-serif;font-size:1.13rem;margin:0 0 4px}.job-company{color:var(--muted);font-size:.9rem}.job-date{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--muted);white-space:nowrap;padding-top:4px}.job ul{padding-left:20px;margin:13px 0 0;color:var(--muted);font-size:.9rem}.job li{margin:7px 0;padding-left:3px}.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.education-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:23px}.education-card h3{font-family:Manrope,sans-serif;margin:0 0 7px;font-size:1.05rem}.education-card p{color:var(--muted);font-size:.88rem;margin:0}.contact-panel{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(28px,6vw,60px);display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px}.contact-panel .eyebrow{color:#b8c3b8}.contact-panel h2{font-family:Manrope,sans-serif;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.07em;margin:0 0 18px;max-width:650px}.contact-panel p{color:#c0c9c1;max-width:550px;margin:0}.contact-panel .button{background:var(--green);border-color:var(--green);color:var(--ink);white-space:nowrap}.contact-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px}.contact-links a{color:#e7ece5;font-size:.85rem;text-decoration:none;border-bottom:1px solid #68746a;padding-bottom:3px}.footer{display:flex;justify-content:space-between;gap:15px;padding:25px 0 35px;color:var(--muted);font-size:.78rem}.footer p{margin:0}.skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:12px;top:12px;background:#fff;padding:10px;z-index:99}.reveal{opacity:1;transform:none}
+    @media(min-width:900px){.reveal.ready{opacity:0;transform:translateY(15px);transition:opacity .55s ease,transform .55s ease}.reveal.ready.visible{opacity:1;transform:translateY(0)}}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding-top:58px}.hero-art{min-height:370px}.section-heading,.experience{grid-template-columns:1fr;gap:16px}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-panel{grid-template-columns:1fr;align-items:start}.contact-panel .button{justify-self:start}}
+    @media(max-width:600px){.wrap{width:min(100% - 30px,1160px)}.nav{min-height:66px}.nav-links{gap:14px}.nav-links a:not(:last-child){display:none}.nav-cta{padding:10px 13px;font-size:.8rem}.hero{padding:50px 0}.hero h1{font-size:clamp(2.9rem,14vw,4.2rem)}.hero-copy{font-size:1rem}.hero-art{min-height:330px;padding:18px}.code-window{top:25%;left:7%;right:7%;padding:17px}.chip-one{bottom:17%;right:5%}.chip-two{bottom:6%;left:5%}.section{padding:55px 0}.skill-layout,.featured-grid,.project-grid,.education-grid{grid-template-columns:1fr}.section-heading h2{font-size:2.35rem}.feature-visual{height:145px}.project-img{height:175px}.job-head{flex-direction:column;gap:3px}.job-date{order:-1}.footer{flex-direction:column}.contact-panel{padding:28px 22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal.ready{opacity:1;transform:none}}
+    @media print{.site-header,.hero-art,.hero-actions,.contact-panel .button,.contact-links,.footer{display:none!important}body{background:#fff;color:#111;font-size:10pt}.wrap{width:100%}.hero,.section{padding:18px 0;border-color:#ccc}.hero{display:block}.hero h1{font-size:30pt}.hero-copy,.section-heading p,.feature-body p,.project p,.job ul,.education-card p{color:#333}.section-heading,.experience{display:block}.section-heading{margin-bottom:14px}.section-heading h2{font-size:19pt}.featured-grid,.project-grid,.skill-layout,.education-grid{grid-template-columns:repeat(2,1fr);gap:8px}.feature-card,.project,.skill-group,.education-card{break-inside:avoid;box-shadow:none}.feature-visual{display:none}.feature-body,.project-content,.skill-group,.education-card{padding:12px}.feature-body .tags{margin-bottom:8px}.feature-link{display:none}.job{break-inside:avoid;padding:12px 0}.contact-panel{background:#fff;color:#111;padding:18px 0}.contact-panel p{color:#333}}
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Sayyed Sairin","jobTitle":"Web Developer","url":"https://sairinsayyed.github.io/","sameAs":["https://www.linkedin.com/in/sairin-sayyed/","https://github.com/SairinSayyed"]}
+  </script>
 </head>
 <body>
-
-  <div class="container">
-    <nav>
-      <div class="logo">Sairin Sayyed</div>
-      <div class="nav-right">
-        <div class="nav-links">
-          <a href="#skills">Skills</a>
-          <a href="#automation">Automation</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Web Work</a>
-          <a href="#contact">Contact</a>
-          <a href="javascript:window.print()" style="color: var(--text-main); font-weight: 700;">↓ Download CV</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Sayyed Sairin home">SAIRIN<span></span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#expertise">Expertise</a><a href="#automation">Automation</a><a href="#work">Web work</a><a href="#experience">Experience</a>
+      </nav>
+      <a class="nav-cta" href="resume.pdf" download>Download Resume <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap" id="top">
+      <section class="hero reveal" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Web development · AI automation · integrations</p>
+          <h1 id="hero-title">I build useful things for the <span class="highlight">web.</span></h1>
+          <p class="hero-copy">I’m Sayyed Sairin, a web developer expanding into AI-powered support, Python automation, cloud services, and business application integrations. I enjoy connecting practical technology with real business needs.</p>
+          <div class="hero-actions"><a class="button dark" href="resume.pdf" download>Download Resume <span aria-hidden="true">↓</span></a><a class="button light" href="#work">Explore selected work <span aria-hidden="true">↓</span></a><a class="button light" href="https://www.linkedin.com/in/sairin-sayyed/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+          <p class="hero-note">Based in Mumbai, India · Open to new opportunities</p>
         </div>
-        <button class="theme-toggle-btn" id="themeToggle">Dark</button>
-      </div>
-    </nav>
-
-    <section class="section-grid reveal">
-      <div class="section-label">Profile</div>
-      <div>
-        <h1>Sayyed Sairin</h1>
-        <h2>AI Automation Systems & Web Developer</h2>
-        <p style="margin-top: 16px; font-size: 16px;">
-          Building intelligent automation pipelines, secure cloud infrastructure, and highly calibrated web experiences. Specializing in Python orchestration, natural language conversational bots, and modern full-stack systems.
-        </p>
-        <p style="font-size: 14px;">
-          <strong>Career Objective:</strong> To collaborate within a progressive engineering landscape that provides the scale to design impactful technical software ecosystems while driving accelerated organizational growth.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="section-grid reveal">
-      <div class="section-label">Expertise</div>
-      <div>
-        <div class="tags-container">
-          <span class="tag">Python (AI & Cloud Systems)</span>
-          <span class="tag">Vertex AI & Dialogflow</span>
-          <span class="tag">Google Cloud Platform</span>
-          <span class="tag">HTML5, CSS3, JavaScript</span>
-          <span class="tag">PHP Backend Architecture</span>
-          <span class="tag">WordPress Ecosystem</span>
-          <span class="tag">Cyber Security Tools</span>
-          <span class="tag">Shopify Engineering</span>
-          <span class="tag">Moodle Deployment</span>
-          <span class="tag">Kali Linux Stack</span>
-          <span class="tag">REST API integrations</span>
+        <div class="hero-art" aria-label="Decorative illustration of web development and automation">
+          <div class="art-top"><span>Currently building</span><span class="availability">Curious by default</span></div>
+          <div class="code-window" aria-hidden="true"><div class="window-head"><i></i><i></i><i></i></div><div class="code-label">workflow.py</div><div class="code-line"><span class="orange">def</span> <span class="lime">solve_problem</span>(request):</div><div class="code-line">&nbsp;&nbsp;context = understand(request)</div><div class="code-line">&nbsp;&nbsp;solution = build(context)</div><div class="code-line">&nbsp;&nbsp;<span class="orange">return</span> test(solution)</div></div>
+          <div class="floating-chip chip-one">✳ AI + automation</div><div class="floating-chip chip-two">&lt;/&gt; Web solutions</div>
         </div>
+      </section>
 
-        <br>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 12px;">Cyber Security Capabilities & Reconnaissance</h3>
-        <ul class="bullet-list">
-          <li>Conducted open-source intelligence web reconnaissance matrices using <strong>recon-ng</strong> and infrastructure profiling frameworks.</li>
-          <li>Executed deep network asset discovery and service vulnerability validation using the <strong>Nmap</strong> tool suite.</li>
-          <li>Audited data layers using <strong>SQLMAP</strong> to identify and isolate application SQL Injection vulnerabilities.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="automation" class="section-grid reveal">
-      <div class="section-label">Automation</div>
-      <div>
-        <div class="automation-container">
-          
-          <div class="pipeline-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 18px; margin-bottom: 10px;">AI Support Bot Engine</h3>
-              <p style="font-size: 14px; margin-bottom: 20px;">Developed an automated admin assistant bot using Vertex AI and Dialogflow. Programmed conversational logic branches to securely handle normal user account creation and automated administrator password changes without manual intervention.</p>
-            </div>
-            <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Vertex AI</span>
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Dialogflow</span>
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Python</span>
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">GCP</span>
-            </div>
-          </div>
-
-          <div class="pipeline-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 18px; margin-bottom: 10px;">Domain Workspace Pipelines</h3>
-              <p style="font-size: 14px; margin-bottom: 20px;">Engineered optimized infrastructure control scripts using Python to manage business enterprise life cycles. Handles programmatically triggered workspace domain creation sequences alongside safe, remote client suspension operations.</p>
-            </div>
-            <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Python</span>
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">REST APIs</span>
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Admin SDK</span>
-              <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Cloud Automations</span>
-            </div>
-          </div>
-
+      <section class="section reveal" id="expertise" aria-labelledby="expertise-title">
+        <div class="section-heading"><p class="eyebrow">01 / Technical toolkit</p><div><h2 id="expertise-title">A practical mix of web, cloud and automation.</h2><p>I bring a web-development foundation and hands-on exposure to tools that help teams support users, connect services, and improve repetitive workflows.</p></div></div>
+        <div class="skill-layout">
+          <article class="skill-group"><h3>Web development & CMS</h3><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">WordPress</span><span class="tag">Shopify</span><span class="tag">Moodle</span><span class="tag">Responsive design</span></div></article>
+          <article class="skill-group"><h3>AI & conversational systems</h3><div class="tags"><span class="tag">Dialogflow</span><span class="tag">Vertex AI</span><span class="tag">AI support workflows</span><span class="tag">Claude</span><span class="tag">Zoho Agents — exploring</span></div></article>
+          <article class="skill-group"><h3>Automation, cloud & APIs</h3><div class="tags"><span class="tag">Python</span><span class="tag">Google Cloud Platform</span><span class="tag">Google Workspace</span><span class="tag">Google Reseller API</span><span class="tag">Service Accounts</span><span class="tag">Google Apps Script</span><span class="tag">REST APIs</span></div></article>
+          <article class="skill-group"><h3>Platforms & technical operations</h3><div class="tags"><span class="tag">cPanel</span><span class="tag">FTP</span><span class="tag">Website migrations</span><span class="tag">Production debugging</span><span class="tag">GitHub</span><span class="tag">Zoho CRM</span><span class="tag">Zoho Books</span><span class="tag">Zoho Projects</span><span class="tag">React.js — learning</span></div></article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="experience" class="section-grid reveal">
-      <div class="section-label">Experience</div>
-      <div>
-        <div class="exp-wrapper">
-          
-          <div class="exp-item">
-            <div class="company-logo-wrapper">
-              <svg class="company-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <span class="exp-role">Executive Web Developer, Think Technology Services</span>
-              </div>
-              <div class="premium-badge">
-                <div class="badge-dot"></div>
-                <span>Jan 2025 – Present</span>
-                <span class="badge-sep">•</span>
-                <span style="color: var(--text-muted);">Mumbai, IN</span>
-              </div>
-            </div>
-            <ul class="bullet-list">
-              <li>Designed and developed responsive websites using HTML, CSS, JavaScript, PHP, as well as CMS platforms like WordPress and Shopify.</li>
-              <li>Gained hands-on experience with cPanel, including website deployment and site migrations for seamless transitions.</li>
-              <li>Customized and maintained WordPress and Shopify themes, enhancing site performance, UX, and functionality.</li>
-              <li>Managed multiple projects simultaneously, consistently meeting deadlines and client expectations.</li>
-              <li>Collaborated directly with clients to gather requirements and deliver tailored web solutions aligned with their business goals.</li>
-              <li>Architected structural conversational flow layers using Dialogflow and Vertex AI within the Google Cloud framework.</li>
-              <li>Engineered custom Python scripts for programmatic user profiles, secure credential management, and Reseller system APIs.</li>
-            </ul>
-          </div>
-
-          <div class="exp-item">
-            <div class="company-logo-wrapper">
-              <svg class="company-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5v-15A2.5 2.5 0 0 1 6.5 2V4M20 2v20"/></svg>
-            </div>
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <span class="exp-role">Web Developer, Limra Online School</span>
-              </div>
-              <div class="premium-badge">
-                <div class="badge-dot" style="background-color: #cbd5e1;"></div>
-                <span>Feb 2024 – Dec 2024</span>
-                <span class="badge-sep">•</span>
-                <span style="color: var(--text-muted);">Remote</span>
-              </div>
-            </div>
-            <ul class="bullet-list">
-              <li>Developed Limra online school website, enhancing user experience with interactive design elements.</li>
-              <li>Developed an engaging LMS on WordPress with interactive design elements, implementing custom themes and plugins to precisely meet the online school’s needs.</li>
-            </ul>
-          </div>
-
-          <div class="exp-item">
-            <div class="company-logo-wrapper">
-              <svg class="company-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 8v8M8 16.5l3.5-2.5M16 16.5L12.5 14"/></svg>
-            </div>
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <span class="exp-role">Web Developer, AFHI UNIVERSAL</span>
-              </div>
-              <div class="premium-badge">
-                <div class="badge-dot" style="background-color: #cbd5e1;"></div>
-                <span>Feb 2023 – Jan 2024</span>
-                <span class="badge-sep">•</span>
-                <span style="color: var(--text-muted);">Remote</span>
-              </div>
-            </div>
-            <ul class="bullet-list">
-              <li>Developed and enhanced Moodle websites with backend/frontend improvements, plugin setup, and static pages using HTML, CSS, and JavaScript.</li>
-              <li>Improved site visuals and user experience by designing layouts and themes in Canva.</li>
-              <li>Edited and integrated educational videos into Moodle, including YouTube optimization and uploads.</li>
-            </ul>
-          </div>
-
+      <section class="section reveal" id="automation" aria-labelledby="automation-title">
+        <div class="section-heading"><p class="eyebrow">02 / Automation & applied AI</p><div><h2 id="automation-title">Turning recurring tasks into clearer workflows.</h2><p>Selected technical work that extends beyond traditional website development. Project descriptions focus on the work and tools, not inflated claims.</p></div></div>
+        <div class="featured-grid">
+          <article class="feature-card">
+            <div class="feature-visual bot" aria-hidden="true"><div class="visual-window"><div class="bar"></div><div class="line"></div><div class="line short"></div><div class="mini-btn"></div></div><div class="bubble">Support assistant · Online</div></div>
+            <div class="feature-body"><div class="feature-meta"><span class="meta">AI support</span><span class="status">Built</span></div><h3>AI-powered support bot</h3><p>Built a conversational support workflow using Dialogflow and Vertex AI, with Python and Google Cloud services, for selected account and administrative support tasks.</p><div class="tags"><span class="tag">Dialogflow</span><span class="tag">Vertex AI</span><span class="tag">Python</span><span class="tag">GCP</span></div><span class="meta">Selected work · details available on request</span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-visual cloud" aria-hidden="true"><div class="visual-window"><div class="bar"></div><div class="line short"></div><div class="line"></div><div class="line short"></div><div class="mini-btn"></div></div><div class="bubble">Domain setup → API</div></div>
+            <div class="feature-body"><div class="feature-meta"><span class="meta">Python automation</span><span class="status">Implemented</span></div><h3>Domain & Workspace automation</h3><p>Created Python scripts to support domain provisioning and Google Workspace administration workflows using service accounts and reseller-related APIs.</p><div class="tags"><span class="tag">Python</span><span class="tag">Google Reseller API</span><span class="tag">Service Accounts</span><span class="tag">Google Workspace</span></div><span class="meta">Automation · API integration</span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-visual zoho" aria-label="Zoho brand mark and agent workflow project"><div style="background:#fff;border:1px solid #f0d6cc;border-radius:16px;padding:24px 34px;box-shadow:0 10px 25px #18211d12"><img src="https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-web.svg" alt="Zoho logo" style="width:150px;height:auto" loading="lazy"></div><div class="bubble">Agent workflows</div></div>
+            <div class="feature-body"><div class="feature-meta"><span class="meta">Business automation</span><span class="status progress">Exploring</span></div><h3>Zoho Agents</h3><p>Exploring Zoho Agents to create assistants for business workflows. This work is at an early stage; specific use cases and integrations will be added as they are implemented.</p><div class="tags"><span class="tag">Zoho ecosystem</span><span class="tag">AI agents</span><span class="tag">Workflow design</span></div><span class="meta">In progress · early stage</span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-visual portal" aria-hidden="true"><div class="visual-window"><div class="bar"></div><div class="line"></div><div class="line short"></div><div class="line"></div><div class="mini-btn"></div></div><div class="bubble">Reseller workspace</div></div>
+            <div class="feature-body"><div class="feature-meta"><span class="meta">Business application</span><span class="status progress">In progress</span></div><h3>Partner Portal</h3><p>Contributing to an early-stage reseller dashboard concept involving portal functionality and payment-related workflows. Kept here as a work in progress, not a completed project.</p><div class="tags"><span class="tag">Dashboard UI</span><span class="tag">Business workflows</span></div><span class="meta">Early-stage project</span></div>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section-grid reveal">
-      <div class="section-label">Education</div>
-      <div>
-        <div class="exp-wrapper">
-          
-          <div class="exp-item" style="padding-bottom: 24px; margin-bottom: 24px;">
-            <div class="exp-header" style="margin-bottom: 8px;">
-              <span class="exp-role" style="font-size: 16px;">Master of Science in Computer Science</span>
-              <span class="date-badge" style="font-size: 12px; color: var(--text-muted);">2021 – 2023</span>
-            </div>
-            <p style="font-size: 14px; margin: 0; color: var(--text-main); font-weight: 500;">Mumbai University <span style="color: var(--text-muted); font-weight: 400; margin-left: 6px;">— Standing: 7.23 / 10 CGPA</span></p>
-          </div>
-
-          <div class="exp-item" style="padding-bottom: 0; margin-bottom: 0;">
-            <div class="exp-header" style="margin-bottom: 8px;">
-              <span class="exp-role" style="font-size: 16px;">Bachelor of Science in Physics</span>
-              <span class="date-badge" style="font-size: 12px; color: var(--text-muted);">2018 – 2021</span>
-            </div>
-            <p style="font-size: 14px; margin: 0; color: var(--text-main); font-weight: 500;">Royal College <span style="color: var(--text-muted); font-weight: 400; margin-left: 6px;">— Standing: 8.40 / 10 CGPA</span></p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section-grid reveal">
-      <div class="section-label">Web Work</div>
-      <div>
-        <div class="projects-grid">
-          
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Anirit Ventures">
-            <div class="project-info">
-              <h3>Anirit Ventures</h3>
-              <p>Corporate financial relations ecosystem built for robust investor data reporting and performance layouts.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Responsive UI</span>
-                </div>
-                <a href="https://www.aniritventures.com/investor-relations.html" target="_blank" class="btn-live">Live Site ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Trading">
-            <div class="project-info">
-              <h3>Kirtanlal Pipe Trading</h3>
-              <p>A structured commercial website engineered to cleanly showcase comprehensive product catalogs and specifications for diverse types of industrial pipes.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">CSS</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">JS</span>
-                </div>
-                <a href="https://kirtanlal.ae/trading/" target="_blank" class="btn-live">Live Site ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Blinds">
-            <div class="project-info">
-              <h3>Monsoon Blinds Landing Page </h3>
-              <p>A custom retail product display page structured with modern grid alignments to directly sell heavy-duty, protective outdoor monsoon blinds.</p> 
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Frontend</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">UX Arch</span>
-                </div>
-                <a href="https://www.nbtcurtainsystems.com/dm/monsoon-blinds" target="_blank" class="btn-live">Live Site ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Engineering">
-            <div class="project-info">
-              <h3>Kirtanlal Engineering</h3>
-              <p>Digital catalog web framework engineered with semantic code architectures for displaying and purchasing premium industrial engineering components.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML5</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">CSS</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Core UI</span>
-                </div>
-                <a href="https://kirtanlal.ae/engg/test/" target="_blank" class="btn-live">Live Site ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Zoho">
-            <div class="project-info">
-              <h3>Zoho Landing Page</h3>
-              <p>Optimized service funnel landing page targeting business software integrations and conversions.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">HTML</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Lead Capture</span>
-                </div>
-                <a href="https://ithink.co/dm/zoho/" target="_blank" class="btn-live">Live Site ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Nasiha Trust">
-            <div class="project-info">
-              <h3>Nasiha Trust</h3>
-              <p>Clean non-profit digital ecosystem engineered for public outreach, community trust updates, and secure user actions.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">WordPress</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Design</span>
-                </div>
-                <a href="https://nasihatrust.org/" target="_blank" class="btn-live">Live Site ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop" class="project-img" alt="WAF">
-            <div class="project-info">
-              <h3>Web Application Firewall (WAF)</h3>
-              <p>Machine learning classification model built to identify and drop malicious network exploit request loads.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Python</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">ML</span>
-                </div>
-                <a href="https://github.com/SairinSayyed/web-application-firewall-using-ML" target="_blank" class="btn-live">Source ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" class="project-img" alt="Madiha Core">
-            <div class="project-info">
-              <h3>Developer Source Repositories</h3>
-              <p>Clean component repositories and frontend setup templates built and maintained on GitHub.</p>
-              <div class="project-footer">
-                <div class="tags-container" style="margin-bottom: 0; gap: 4px;">
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">GitHub Source</span>
-                  <span class="tag" style="padding: 3px 10px; font-size: 10px; background: var(--bg);">Open Code</span>
-                </div>
-                <a href="https://github.com/SairinSayyed/MadihaWebsite" target="_blank" class="btn-live">Source ↗</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section-grid reveal">
-      <div class="section-label">Connect</div>
-      <div class="contact-details">
-        <p><strong>Direct Connection:</strong> <a href="tel:+918692937008">+91 8692937008</a></p>
-        <p><strong>Secure Inbox:</strong> <a href="mailto:sayyedsairin@gmail.com">sayyedsairin@gmail.com</a></p>
-        <p><strong>Professional Network:</strong> <a href="https://linkedin.com/in/sairin-sayyed" target="_blank">linkedin.com/in/sairin-sayyed</a></p>
-        
-        <br>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 15px; color: var(--text-muted); margin-bottom: 6px;">Spoken Languages</h3>
-        <p style="color: var(--text-main); font-size: 14px; font-weight: 500;">English (Fluent) • Hindi (Fluent) • Marathi</p>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2026 Sayyed Sairin </p>
-    </footer>
+      <section class="section reveal" id="work" aria-labelledby="work-title">
+  <div class="section-heading">
+    <p class="eyebrow">03 / Selected web work</p>
+    <div>
+      <h2 id="work-title">Websites built for real organisations.</h2>
+      <p>
+        A selection of business websites, landing pages and web projects.
+        Open the live projects to explore them directly.
+      </p>
+    </div>
   </div>
 
+  <div class="project-grid">
+
+
+
+    <!-- Kirtanlal Pipe Trading -->
+    <article class="project">
+      <img class="project-img"
+           src="https://image.thum.io/get/width/1000/crop/650/noanimate/https://kirtanlal.ae/trading/"
+           alt="Kirtanlal Pipe Trading website screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Kirtanlal Pipe Trading</h3>
+        <p>Commercial website presenting industrial pipe products and information.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <a class="text-link"
+           href="https://kirtanlal.ae/trading/"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- Kirtanlal Engineering -->
+    <article class="project">
+      <img class="project-img"
+           src="https://image.thum.io/get/width/1000/crop/650/noanimate/https://kirtanlal.ae/engineering/"
+           alt="Kirtanlal Engineering website screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Kirtanlal Engineering</h3>
+        <p>Engineering-focused business website project.</p>
+        <div class="tags">
+          <span class="tag">Website</span>
+          <span class="tag">Responsive UI</span>
+        </div>
+        <a class="text-link"
+           href="https://kirtanlal.ae/engineering/"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- TIM Guest House Management -->
+    <article class="project">
+      <img class="project-img"
+           src="https://image.thum.io/get/width/1000/crop/650/noanimate/https://timhotels.in/dm/TIM-guest-house-management/"
+           alt="TIM Guest House Management landing page screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>TIM Guest House Management</h3>
+        <p>Landing page for guest house management solutions.</p>
+        <div class="tags">
+          <span class="tag">Landing Page</span>
+          <span class="tag">Frontend</span>
+        </div>
+        <a class="text-link"
+           href="https://timhotels.in/dm/TIM-guest-house-management/"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- Monsoon Blinds -->
+    <article class="project">
+      <img class="project-img"
+           src="https://image.thum.io/get/width/1000/crop/650/noanimate/https://www.nbtcurtainsystems.com/dm/monsoon-blinds"
+           alt="Monsoon Blinds landing page screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Monsoon Blinds</h3>
+        <p>Product-focused landing page for outdoor blinds and curtain systems.</p>
+        <div class="tags">
+          <span class="tag">Landing Page</span>
+          <span class="tag">Frontend</span>
+        </div>
+        <a class="text-link"
+           href="https://www.nbtcurtainsystems.com/dm/monsoon-blinds"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- Zoho Landing Page 1 -->
+    <article class="project">
+      <img class="project-img"
+           src="https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-web.svg"
+           alt="Zoho services landing page screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Zoho Services Landing Page</h3>
+        <p>Landing page presenting Zoho business software services.</p>
+        <div class="tags">
+          <span class="tag">Landing Page</span>
+          <span class="tag">Business Services</span>
+        </div>
+        <a class="text-link"
+           href="https://ithink.co/dm/zoho/"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- Zoho Landing Page 2 -->
+    <article class="project">
+      <img class="project-img"
+           src="https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-web.svg"
+           alt="Zoho GCC landing page screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Zoho GCC Landing Page</h3>
+        <p>Zoho services landing page for the GCC market.</p>
+        <div class="tags">
+          <span class="tag">Landing Page</span>
+          <span class="tag">Zoho</span>
+        </div>
+        <a class="text-link"
+           href="https://www.ithink.co/dm/gcc/zoho/index.html"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+    <!-- Anirit Ventures -->
+    <article class="project">
+      <img class="project-img"
+           src="https://image.thum.io/get/width/1000/crop/650/noanimate/https://www.aniritventures.com/investor-relations.html"
+           alt="Anirit Ventures website screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Anirit Ventures</h3>
+        <p>Corporate website and investor-relations page.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">Responsive UI</span>
+        </div>
+        <a class="text-link"
+           href="https://www.aniritventures.com/investor-relations.html"
+           target="_blank" rel="noopener noreferrer">
+          View live page ↗
+        </a>
+      </div>
+    </article>
+    <!-- Nasiha Trust -->
+    <article class="project">
+      <img class="project-img"
+           src="https://images.pexels.com/photos/14025659/pexels-photo-14025659.jpeg"
+           alt="Nasiha Trust website screenshot"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Nasiha Trust</h3>
+        <p>Non-profit website supporting public information and community outreach.</p>
+        <div class="tags">
+          <span class="tag">WordPress</span>
+          <span class="tag">Website Management</span>
+        </div>
+        <a class="text-link"
+           href="https://nasihatrust.org/"
+           target="_blank" rel="noopener noreferrer">
+          View live site ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- Machine Learning WAF -->
+    <article class="project">
+      <img class="project-img"
+           src="https://image.thum.io/get/width/1000/crop/650/noanimate/https://github.com/SairinSayyed/web-application-firewall-using-ML"
+           alt="Machine-learning web application firewall project"
+           loading="lazy">
+      <div class="project-content">
+        <h3>Machine-Learning WAF Prototype</h3>
+        <p>Portfolio project exploring machine-learning classification for potentially malicious web requests.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+        <a class="text-link"
+           href="https://github.com/SairinSayyed/web-application-firewall-using-ML"
+           target="_blank" rel="noopener noreferrer">
+          View source on GitHub ↗
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+ 
+</section>
+
+      <section class="section reveal" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading"><p class="eyebrow">04 / Experience</p><div><h2 id="experience-title">Web development, with a growing automation focus.</h2><p>Professional experience across websites, learning platforms, production support, and emerging automation work.</p></div></div>
+        <div class="experience"><div><p class="eyebrow">Career timeline</p><p style="color:var(--muted);max-width:330px">I started with website development and CMS work, and have since taken on more technical tasks involving cloud services, scripts, and AI-enabled workflows.</p></div><div class="experience-list">
+          <article class="job"><div class="job-head"><div><h3>Executive Web Developer</h3><div class="job-company">Think Technology Services · Mumbai, India</div></div><div class="job-date">Jan 2025 – Present</div></div><ul><li>Develop and maintain responsive websites and landing pages using HTML, CSS, JavaScript, PHP, WordPress, and Shopify.</li><li>Troubleshoot website and production issues; support cPanel operations, FTP transfers, deployments, and website migrations.</li><li>Build Python-based automation for domain and Google Workspace workflows using service accounts and reseller-related APIs.</li><li>Contribute to conversational support automation using Dialogflow, Vertex AI, Python, and Google Cloud Platform.</li><li>Work with business applications and AI-assisted development tools to investigate issues and implement technical solutions.</li></ul></article>
+          <article class="job"><div class="job-head"><div><h3>Web Developer</h3><div class="job-company">Limra Online School · Remote</div></div><div class="job-date">Feb 2024 – Dec 2024</div></div><ul><li>Developed and maintained the online school website and WordPress-based learning management experience.</li><li>Customized themes and plugins to support education workflows and improve the website experience.</li></ul></article>
+          <article class="job"><div class="job-head"><div><h3>Web Developer Intern</h3><div class="job-company">AFHI Universal · Remote</div></div><div class="job-date">Feb 2023 – Jan 2024</div></div><ul><li>Enhanced Moodle websites through frontend updates, plugin configuration, and static pages using HTML, CSS, and JavaScript.</li><li>Supported visual content creation and educational video integration for online learning platforms.</li><li>Gained exposure to hosting, file transfer, and migration-related tasks.</li></ul></article>
+        </div></div>
+      </section>
+
+      <section class="section reveal" id="education" aria-labelledby="education-title">
+        <div class="section-heading"><p class="eyebrow">05 / Education</p><div><h2 id="education-title">The academic foundation.</h2></div></div>
+        <div class="education-grid"><article class="education-card"><h3>M.Sc. Computer Science</h3><p>University of Mumbai · 2021–2023</p><p><strong>CGPA: 8.40/10</strong></p></article><article class="education-card"><h3>B.Sc. Physics</h3><p>Royal College · 2018–2021</p><p><strong>CGPA: 7.23/10</strong></p></article></div>
+      </section>
+
+      <section class="section reveal" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel"><div><p class="eyebrow">06 / Get in touch</p><h2 id="contact-title">Have a useful problem to solve?</h2><p>I’m interested in opportunities where web development, automation, and practical problem-solving come together.</p><div class="contact-links"><a href="https://www.linkedin.com/in/sairin-sayyed/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/SairinSayyed" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="resume.pdf" download>Download resume (PDF) ↓</a></div></div><a class="button" href="mailto:sayyedsairin@gmail.com">Email me ↗</a></div>
+      </section>
+    </div>
+  </main>
+  <footer class="wrap footer"><p>© <span id="year">2026</span> Sayyed Sairin</p><a class="text-link" href="#top">Back to top ↑</a></footer>
   <script>
-    // Theme Toggle Handler
-    const themeToggleBtn = document.getElementById('themeToggle');
-    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    if (currentTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      themeToggleBtn.textContent = 'Light';
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion-ready');
+      revealItems.forEach(item => item.classList.add('ready'));
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), {threshold: 0.08});
+      revealItems.forEach(item => observer.observe(item));
     }
-
-    themeToggleBtn.addEventListener('click', () => {
-      let theme = document.documentElement.getAttribute('data-theme');
-      if (theme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        themeToggleBtn.textContent = 'Dark';
-        localStorage.setItem('theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggleBtn.textContent = 'Light';
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-
-    // Scroll Reveal Engine
-    const revealSections = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.05 });
-
-    revealSections.forEach(section => revealObserver.observe(section));
   </script>
 </body>
 </html>
